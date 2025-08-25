@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 0 0% 0%; /* Black text */
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 0 0% 0%; /* Black text on cards */
+    --popover: 0 0% 100%; /* White popover */
+    --popover-foreground: 0 0% 0%; /* Black text on popover */
+    --primary: 142 85% 42%; /* Updated to new green color #12C40E */
+    --primary-foreground: 0 0% 100%; /* White text on green */
+    --secondary: 0 0% 96%; /* Light gray */
+    --secondary-foreground: 0 0% 9%; /* Dark gray text */
+    --muted: 0 0% 96%; /* Light gray muted */
+    --muted-foreground: 0 0% 45%; /* Medium gray text */
+    --accent: 142 85% 42%; /* Updated to new green color #12C40E */
+    --accent-foreground: 0 0% 100%; /* White text on green */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%; /* Light gray borders */
+    --input: 0 0% 90%; /* Light gray input borders */
+    --ring: 142 85% 42%; /* Updated to new green color #12C40E */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-outfit), sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-300 {
+    background-size: 300% 300%;
+  }
+
+  .animate-gradient {
+    animation: gradient 4s ease infinite;
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+  }
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Removed scroll-behavior: smooth; for instant page reloads/scrolls */
+html {
+  /* scroll-behavior: smooth; */
+}
+
+/* Ensure Outfit is used everywhere */
+* {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5; /* Light gray track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #12c40e; /* Updated to new green color #12C40E */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f9c0c; /* Updated hover color to darker shade of new green */
+}

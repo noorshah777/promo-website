@@ -21,7 +21,7 @@ export default function Footer() {
   ]
 
   const contactInfo = [
-    { icon: Mail, text: "product.motion@umich.edu" },
+    { icon: Mail, text: "product.motion.umich@gmail.com" },
     { icon: MapPin, text: "University of Michigan, Ann Arbor" },
   ]
 

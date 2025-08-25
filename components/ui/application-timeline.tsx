@@ -55,8 +55,10 @@ const timelineEvents: TimelineEvent[] = [
     date: "August 27, 2025",
     time: "7:00 PM - 8:30 PM",
     location: "Ingalls Mall Table A035",
+    type: "festifall",
+    startDate: "2025-08-27T19:00:00",
+    endDate: "2025-08-27T20:30:00",
     description: "Stop by our table to learn about Product Motion, meet current members, and discover how to get involved this semester",
-    endDate: "2024-08-27T20:30:00",
     tips: [
       "Stop by our table to meet members and learn what Product Motion is all about.",
       "Ask about the upcoming open houses to plan your attendance.",
@@ -123,6 +125,7 @@ const timelineEvents: TimelineEvent[] = [
   time: "TBD",
   location: "TBD",
   description: "Participate in a hands-on mini PM project to showcase your problem-solving, creativity, and collaboration skills.",
+  type: "workshop",
   startDate: "2024-09-09T00:00:00",
   endDate: "2024-09-09T23:59:59",
   tips: [
@@ -172,7 +175,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "Invitation Only",
     location: "Invitation Only",
     description: "Complete a brief written PM exercise to demonstrate your approach to a real-world product challenge",
-    type: "assignment",
+    type: "interview",
     startDate: "2024-09-15T00:00:00",
     endDate: "2024-09-15T23:59:59",
     tips: [
@@ -189,7 +192,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "TBD", 
     location: "TBD",
     description: "Accepted members are notified and onboarding begins. Welcome to the Product Motion cohort!",
-    type: "notification",
+    type: "onboarding",
     startDate: "2024-09-17T00:00:00",
     endDate: "2024-09-17T23:59:59",
     tips: [

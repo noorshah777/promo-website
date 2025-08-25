@@ -51,7 +51,7 @@ export default function HomePage() {
       title: "Launchpad Program",
       description:
         "We launched our mentorship-based pilot program, guiding students through every step of the PM journey.",
-      date: "Summer 2024",
+      date: "Summer 2025",
       status: "completed" as const,
     },
     {

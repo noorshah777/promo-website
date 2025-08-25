@@ -1,13 +1,16 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
 
 export default function Navigation() {
   const pathname = usePathname()
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -17,7 +20,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white">
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -28,11 +31,16 @@ export default function Navigation() {
             transition={{ duration: 0.5 }}
           >
             <div className="relative">
-              <Image src="/images/promologo.png" alt="Product Motion Logo" width={80} height={80} />
+              <Image
+                src="/images/promologo.png"
+                alt="Product Motion Logo"
+                width={80}
+                height={80}
+              />
             </div>
           </motion.div>
 
-          {/* Centered Navigation Items */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-8 flex-1">
             {navItems.map((item, index) => (
               <motion.div
@@ -45,7 +53,9 @@ export default function Navigation() {
                   href={item.href}
                   scroll={true}
                   className={`font-medium transition-all duration-300 relative group ${
-                    pathname === item.href ? "text-[#0C8731]" : "text-black hover:text-[#0C8731]"
+                    pathname === item.href
+                      ? "text-[#0C8731]"
+                      : "text-black hover:text-[#0C8731]"
                   }`}
                 >
                   {item.name}
@@ -59,26 +69,80 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Apply Button */}
+          {/* Desktop Apply Button */}
           <motion.div
+            className="hidden md:block"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-          <Link href="/apply-now" scroll={true}>
-            <Button
-              className="text-white font-bold px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-[#0C8731]/25 transition-all duration-300 bg-cover bg-center"
-              style={{
-                backgroundImage: "url('/images/mesh-bg.png')",
-              }}
-            >
-              Apply Now
-            </Button>
-          </Link>
-
+            <Link href="/apply-now" scroll={true}>
+              <Button
+                className="text-white font-bold px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-[#0C8731]/25 transition-all duration-300 bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/images/mesh-bg.png')",
+                }}
+              >
+                Apply Now
+              </Button>
+            </Link>
           </motion.div>
+
+          {/* Mobile Hamburger */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-gray-700 focus:outline-none"
+            >
+              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-white shadow-lg overflow-hidden"
+          >
+            <div className="px-4 pt-4 pb-6 space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  scroll={true}
+                  onClick={() => setMobileOpen(false)}
+                  className={`block font-medium transition-colors duration-300 ${
+                    pathname === item.href
+                      ? "text-[#0C8731]"
+                      : "text-gray-800 hover:text-[#0C8731]"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              {/* Mobile Apply Button */}
+              <Link href="/apply-now" scroll={true}>
+                <Button
+                  onClick={() => setMobileOpen(false)}
+                  className="w-full text-white font-bold px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-[#0C8731]/25 transition-all duration-300 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('/images/mesh-bg.png')",
+                  }}
+                >
+                  Apply Now
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

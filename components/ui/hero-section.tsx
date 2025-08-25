@@ -26,3 +26,4 @@ export default function HeroSection(
         </motion.h1> {description && ( <motion.p className="text-lg md:text-xl text-gray-700 mb-8 font-medium leading-relaxed" 
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} > {description} </motion.p> )} 
         </motion.div> {primaryButton && ( <motion.div className="flex flex-col sm:flex-row gap-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} > <Link href={primaryButton.href}> <Button style={{ backgroundImage: "url('/images/mesh-bg.png')", backgroundSize: "cover", backgroundPosition: "center", }} className="text-white text-lg px-10 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 shadow-2xl hover:shadow-green-500/25" > {primaryButton.text} </Button> </Link> </motion.div> )} </div> </div> </section> ) }
+

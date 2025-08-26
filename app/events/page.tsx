@@ -37,7 +37,7 @@ export default function EventsPage() {
       title: "Festifall",
       date: "August 27, 2025",
       time: "7:00 PM - 8:30 PM",
-      location: "Ingalls Mall",
+      location: "Table A035",
       description: "Meet the club, learn about our mission, and discover ways to get involved this year!",
       image: "/placeholder.svg?height=200&width=300",
       startDate: "2025-08-27T19:00:00",

@@ -52,8 +52,8 @@ export default function EventsPage() {
       location: "Ross Basement - Table 41",
       description: "Meet the team and learn more about how you can get involved!",
       image: "/placeholder.svg?height=200&width=300",
-      startDate: "2025-09-01T18:00:00",
-      endDate: "2025-09-01T20:00:00",
+      startDate: "2025-09-02T18:00:00",
+      endDate: "2025-09-02T20:00:00",
       featured: true,
     },
     {

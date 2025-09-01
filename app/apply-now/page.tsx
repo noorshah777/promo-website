@@ -107,7 +107,7 @@ export default function ApplyNowPage() {
           description="We recruit once a semester for our internal program. Our application process is designed to find students who are curious, collaborative, and ready to grow—no PM experience required."
           primaryButton={{
             text: "Start Application",
-            href: "https://docs.google.com/forms/d/e/1FAIpQLSdpFom1GCV6S_HzauPqPLQHdh9roGLSgVXWuRs_dbp9MvMPgw/viewform?usp=header",
+            href: "https://docs.google.com/forms/u/0/d/19_7M_zc6PNVUdoBroNWvIuRKc7fFoBfZF0FNd89jx9w/viewform?edit_requested=true",
           }}
         />
 

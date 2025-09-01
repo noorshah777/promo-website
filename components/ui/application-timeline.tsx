@@ -66,50 +66,16 @@ const timelineEvents: TimelineEvent[] = [
       "Bring a friend who may also be interested in product management."
     ],
   },
-  {
-    id: "2",
-    title: "Open House #1",
-    date: "September 1, 2025",
-    time: "6:00 PM - 8:00 PM",
-    location: "Kuenzel Room, Michigan Union",
-    description: "Get an inside look at the perks of joining our community. Ask questions and network with current members.",
-    type: "open-house",
-    startDate: "2024-09-01T18:00:00",
-    endDate: "2024-09-01T20:00:00",
-    tips: [
-      "Arrive early to grab a good seat and meet fellow prospective members.",
-      "Listen closely to learn about cohort projects and mentorship opportunities.",
-      "Introduce yourself to board members and ask about their experiences.",
-      "Take notes on what excites you most for your application later."
-    ],
-  },
-  {
-    id: "3",
-    title: "Open House #2",
-    date: "September 4, 2025",
-    time: "6:00 PM - 7:30 PM",
-    location: "Room 4, Michigan Union",
-    description: "Missed the first session? Learn about our recruiting process, meet the team, and connect with other prospective members.",
-    type: "open-house",
-    startDate: "2024-09-04T18:00:00",
-    endDate: "2024-09-04T19:30:00",
-    tips: [
-      "If you missed the first open house, this is your chance to catch up.",
-      "Engage with board members and current members to learn their stories.",
-      "Jot down details about the projects and perks you find most interesting.",
-      "Show enthusiasm and curiosity — it makes a lasting impression."
-    ],
-  },
 {
-  id: "4",
+  id: "2",
   title: "Applications Open",
-  date: "September 5, 2025",
+  date: "September 1, 2025",
   time: "12PM",
   location: "Virtual",
   description: "Submit your application to express interest in joining Product Motion and provide your background and availability for next steps.",
   type: "application",
-  startDate: "2024-09-05T00:00:00",
-  endDate: "2024-09-05T23:59:59",
+  startDate: "2024-09-01T00:00:00",
+  endDate: "2024-09-01T23:59:59",
   tips: [
     "Submit your application early to avoid last-minute stress.",
     "Highlight experiences that showcase collaboration and problem-solving.",
@@ -117,6 +83,39 @@ const timelineEvents: TimelineEvent[] = [
     "Double-check your availability for interviews and assignments."
   ],
 },
+  {
+    id: "3",
+    title: "BBA MTC",
+    date: "September 2, 2025",
+    time: "5:30 PM - 7:30 PM",
+    location: "Ross Basement - Table 41",
+    description: "Get an inside look at the perks of joining our community. Ask questions and network with current members.",
+    type: "open-house",
+    startDate: "2024-09-02T17:30:00",
+    endDate: "2024-09-02T19:30:00",
+    tips: [
+      "Stop by our table to meet members and learn what Product Motion is all about.",
+      "Introduce yourself to board members and ask about their experiences.",
+      "Take notes on what excites you most for your application later."
+    ],
+  },
+  {
+    id: "4",
+    title: "Open House #1",
+    date: "September 4, 2025",
+    time: "6:00 PM - 7:30 PM",
+    location: "Room 4, Michigan Union",
+    description: "Learn about our recruiting process, meet the team, and connect with other prospective members.",
+    type: "open-house",
+    startDate: "2024-09-04T18:00:00",
+    endDate: "2024-09-04T19:30:00",
+    tips: [
+      "Engage with board members and current members to learn their stories.",
+      "Jot down details about the projects and perks you find most interesting.",
+      "Show enthusiasm and curiosity — it makes a lasting impression."
+    ],
+  },
+
 
 {
   id: "5",
